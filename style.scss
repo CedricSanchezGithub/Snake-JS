@@ -1,0 +1,20 @@
+body{
+    background: rgb(24, 24, 24);
+    display: flex;
+    justify-content: center;
+    #snake_case{
+        position: relative;
+        background: black;
+        border: 1px solid whitesmoke;
+        width: 1000px;
+        height: 700px;
+        #snake{
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            height: 5px;
+            width: 20px;
+            background-color: whitesmoke;
+        }
+    }
+}
