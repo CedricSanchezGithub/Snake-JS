@@ -1,17 +1,15 @@
-let leftValue = getComputedStyle(snake).left;
-let left = leftValue;
-let right = 50;
-console.log(snake);
-function snake_right() {
-  snake.style.left = `${left}%`;
-  left += 1;
-  console.log(left);
+let leftValue = getComputedStyle(snake).left; // Récupère la propriété css via getComputedStyle de l'id(snake)
+let left = parseInt(leftValue, 10); // récupère uniquement le number de cette donnée sur base 10
+
+let rightValue = getComputedStyle(snake).right;
+let right = parseInt(rightValue, 10);
+
+function snake_directon(direction) {
+  snake.style.direction = `${direction}px`;
+  console.log(direction);
 }
 
-setInterval(snake_right, 1000);
-
-function snake_right() {
-    snake.style.right = `${right}%`;
-    right += 1;
-    console.log(right);
-  }
+setInterval(function () {
+  snake_directon(left);
+  left += 5;
+}, 500);
